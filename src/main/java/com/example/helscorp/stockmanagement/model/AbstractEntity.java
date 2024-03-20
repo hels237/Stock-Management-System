@@ -10,8 +10,10 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 
+//he would listenimg the AbstractEntity class  and update the field accordently each time it's meet @CreateData and @LastModifiedData
+// he automaticaly update the field in database
 @MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)//he would listenimg the object and update the field accordently
+@EntityListeners(AuditingEntityListener.class)
 public class AbstractEntity  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
