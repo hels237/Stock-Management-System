@@ -1,11 +1,12 @@
 package com.example.helscorp.stockmanagement.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -14,4 +15,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "cmdeFournisseur")
 public class CmdeFournisseur extends AbstractEntity{
+    @ManyToOne
+    @JoinColumn(name = "fournisseurId")
+    private Fournisseur fournisseur;
+    @OneToMany(mappedBy = "cmdeFournisseur")
+    private List<LigneCmdeFournisseur> ligneCmdeFournisseurs;
+
 }

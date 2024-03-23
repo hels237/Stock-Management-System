@@ -1,14 +1,14 @@
 package com.example.helscorp.stockmanagement.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,8 +29,16 @@ public class Article extends AbstractEntity{
     @Column(name = "prix_UnitaireTtc")
     private BigDecimal prixUnitaireTtc;
 
-    private String photo;
+    @Column(name = "urlPhoto")
+    private String urlPhoto;
 
+    @ManyToOne
+    @JoinColumn(name = "IdCategory")
+    private Category category;
+    @OneToMany(mappedBy = "article")
+    private List<LigneCmdeClient> ligneCmdeClients;
+    @OneToMany(mappedBy = "article")
+    private List<LigneCmdeFournisseur> ligneCmdeFournisseurs;
 
 
 
