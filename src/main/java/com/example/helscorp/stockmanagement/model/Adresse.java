@@ -7,10 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Embeddable
 public class Adresse {
     @Column(name = "adresse1")
@@ -25,5 +22,46 @@ public class Adresse {
     private String codePostal;
 
 
+    public Adresse() {
+    }
 
+    public String getAdresse1() {
+        return adresse1;
+    }
+
+    public void setAdresse1(String adresse1) {
+        this.adresse1 = adresse1;
+    }
+
+    public String getAdresse2() {
+        return adresse2;
+    }
+
+    public void setAdresse2(String adresse2) {
+        this.adresse2 = adresse2;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getPays() {
+        return pays;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public String getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
+    }
 }

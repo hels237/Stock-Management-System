@@ -28,6 +28,9 @@ public class AbstractEntity  implements Serializable {
     private Instant lastUpdate;
 
 
+    public AbstractEntity() {
+    }
+
     public Integer getId() {
         return id;
     }
