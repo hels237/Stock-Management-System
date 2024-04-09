@@ -1,14 +1,11 @@
 package com.example.helscorp.stockmanagement.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-
+@Builder
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Entity

@@ -1,14 +1,12 @@
 package com.example.helscorp.stockmanagement.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.List;
 
+@Builder
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "cmdeClient")
