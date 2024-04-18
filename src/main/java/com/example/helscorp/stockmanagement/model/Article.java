@@ -11,6 +11,8 @@ import java.util.List;
 @Entity
 @Table(name = "article")
 public class Article extends AbstractEntity{
+
+
     @Column(name = "code_article")
     private String codeArticle ;
 
