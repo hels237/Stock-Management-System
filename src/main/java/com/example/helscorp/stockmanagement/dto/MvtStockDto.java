@@ -12,6 +12,8 @@ import java.time.Instant;
 @Data
 public class MvtStockDto {
 
+    private Integer id;
+
     private Instant dateMvt;
 
     private BigDecimal quantite;

@@ -10,6 +10,8 @@ import java.util.List;
 @Data
 public class VenteDto {
 
+    private Integer id;
+
     private String codeVente;
 
     private Instant dateVente;

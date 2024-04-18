@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 @Data
 public class LigneCmdeFournisseurDto {
 
+    private Integer id;
+
     private CmdeFournisseurDto cmdeFournisseur;
 
     private ArticleDto article;

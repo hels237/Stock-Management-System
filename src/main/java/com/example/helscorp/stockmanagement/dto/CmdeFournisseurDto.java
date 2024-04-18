@@ -11,6 +11,8 @@ import java.util.List;
 @Data
 public class CmdeFournisseurDto {
 
+    private Integer id;
+
     private Instant dateCmde;
 
     private String code;

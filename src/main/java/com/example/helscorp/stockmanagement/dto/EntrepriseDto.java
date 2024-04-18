@@ -10,6 +10,8 @@ import java.util.List;
 @Data
 public class EntrepriseDto {
 
+    private Integer id;
+
     private String nom;
 
     private String description;

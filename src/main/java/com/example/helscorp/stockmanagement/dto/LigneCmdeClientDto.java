@@ -10,6 +10,8 @@ import java.math.BigDecimal;
 @Data
 public class LigneCmdeClientDto {
 
+    private Integer id;
+
     private CmdeClientDto cmdeClient;
 
     private ArticleDto article;

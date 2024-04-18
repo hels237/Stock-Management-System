@@ -15,13 +15,16 @@ import java.util.Date;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class AbstractEntity  implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @CreatedDate
     @Column(name = "creationData",nullable = false)
     @JsonIgnore
     private Instant creationDate;
+
     @LastModifiedDate
     @Column(name = "lastModifiedUpdate")
     @JsonIgnore
