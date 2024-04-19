@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "category")
 public class Category extends AbstractEntity{
+
     @Column(name = "code")
     private String code;
     @Column(name = "designation")
@@ -24,6 +25,8 @@ public class Category extends AbstractEntity{
 
     public Category() {
     }
+
+
 
     public String getCode() {
         return code;

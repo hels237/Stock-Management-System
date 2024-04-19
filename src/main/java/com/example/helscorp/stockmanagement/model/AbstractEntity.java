@@ -34,6 +34,12 @@ public class AbstractEntity  implements Serializable {
     public AbstractEntity() {
     }
 
+    public AbstractEntity(Integer id, Instant creationDate, Instant lastUpdate) {
+        this.id = id;
+        this.creationDate = creationDate;
+        this.lastUpdate = lastUpdate;
+    }
+
     public Integer getId() {
         return id;
     }
