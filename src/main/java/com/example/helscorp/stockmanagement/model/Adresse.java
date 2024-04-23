@@ -8,6 +8,8 @@ import lombok.*;
 @EqualsAndHashCode()
 @Embeddable
 public class Adresse {
+
+
     @Column(name = "adresse1")
     private String adresse1;
     @Column(name = "adresse2")
@@ -21,6 +23,14 @@ public class Adresse {
 
 
     public Adresse() {
+    }
+
+    public Adresse(String adresse1, String adresse2, String ville, String pays, String codePostal) {
+        this.adresse1 = adresse1;
+        this.adresse2 = adresse2;
+        this.ville = ville;
+        this.pays = pays;
+        this.codePostal = codePostal;
     }
 
     public String getAdresse1() {

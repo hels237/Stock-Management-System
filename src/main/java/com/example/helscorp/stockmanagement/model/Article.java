@@ -12,7 +12,6 @@ import java.util.List;
 @Table(name = "article")
 public class Article extends AbstractEntity{
 
-
     @Column(name = "code_article")
     private String codeArticle ;
 
@@ -21,8 +20,10 @@ public class Article extends AbstractEntity{
 
     @Column(name = "prix_unitaireHt")
     private BigDecimal prixUnitaireHt;
+
     @Column(name = "taux_Tva")
     private BigDecimal tauxTva;
+
     @Column(name = "prix_UnitaireTtc")
     private BigDecimal prixUnitaireTtc;
 
@@ -32,10 +33,13 @@ public class Article extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name = "IdCategory")
     private Category category;
+
     @OneToMany(mappedBy = "article")
     private List<LigneCmdeClient> ligneCmdeClients;
+
     @OneToMany(mappedBy = "article")
     private List<LigneCmdeFournisseur> ligneCmdeFournisseurs;
+
     @OneToMany(mappedBy = "article")
     private List<MvtStock> mvtStocks;
 
