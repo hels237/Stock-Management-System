@@ -1,10 +1,14 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Adresse;
+import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-
-
+@Builder
+@Setter
+@Getter
 public class AdresseDto {
 
     private Integer id;
@@ -31,57 +35,11 @@ public class AdresseDto {
         this.codePostal = codePostal;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getAdresse1() {
-        return adresse1;
-    }
-
-    public void setAdresse1(String adresse1) {
-        this.adresse1 = adresse1;
-    }
-
-    public String getAdresse2() {
-        return adresse2;
-    }
-
-    public void setAdresse2(String adresse2) {
-        this.adresse2 = adresse2;
-    }
-
-    public String getVille() {
-        return ville;
-    }
-
-    public void setVille(String ville) {
-        this.ville = ville;
-    }
-
-    public String getPays() {
-        return pays;
-    }
-
-    public void setPays(String pays) {
-        this.pays = pays;
-    }
-
-    public String getCodePostal() {
-        return codePostal;
-    }
-
-    public void setCodePostal(String codePostal) {
-        this.codePostal = codePostal;
-    }
 
 
 
-    public AdresseDto fromEntity(Adresse adresse) {
+  //----------------------- mapping entity entityDto -----------------------------
+    public static AdresseDto fromEntity(Adresse adresse) {
 
         if (adresse == null) {
             return null;
@@ -96,13 +54,12 @@ public class AdresseDto {
         return adresseDto;
     }
 
-
-
-    public Adresse toEntity(AdresseDto adresseDto){
+    public static Adresse toEntity(AdresseDto adresseDto){
 
         if(adresseDto == null){
             return null;
         }
+
         Adresse theAdresse = new Adresse();
         theAdresse.setAdresse1(adresseDto.getAdresse1());
         theAdresse.setAdresse2(adresseDto.getAdresse2());

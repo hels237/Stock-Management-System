@@ -1,11 +1,14 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Article;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 
-
+@Setter
+@Getter
 public class ArticleDto {
 
     private Integer id;
@@ -38,72 +41,11 @@ public class ArticleDto {
         this.category = category;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getCodeArticle() {
-        return codeArticle;
-    }
-
-    public void setCodeArticle(String codeArticle) {
-        this.codeArticle = codeArticle;
-    }
-
-    public String getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
-
-    public BigDecimal getPrixUnitaireHt() {
-        return prixUnitaireHt;
-    }
-
-    public void setPrixUnitaireHt(BigDecimal prixUnitaireHt) {
-        this.prixUnitaireHt = prixUnitaireHt;
-    }
-
-    public BigDecimal getTauxTva() {
-        return tauxTva;
-    }
-
-    public void setTauxTva(BigDecimal tauxTva) {
-        this.tauxTva = tauxTva;
-    }
-
-    public BigDecimal getPrixUnitaireTtc() {
-        return prixUnitaireTtc;
-    }
-
-    public void setPrixUnitaireTtc(BigDecimal prixUnitaireTtc) {
-        this.prixUnitaireTtc = prixUnitaireTtc;
-    }
-
-    public String getUrlPhoto() {
-        return urlPhoto;
-    }
-
-    public void setUrlPhoto(String urlPhoto) {
-        this.urlPhoto = urlPhoto;
-    }
-
-    public CategoryDto getCategory() {
-        return category;
-    }
-
-    public void setCategory(CategoryDto category) {
-        this.category = category;
-    }
 
 
-    public ArticleDto fromEntity(Article article){
+
+
+    public static ArticleDto fromEntity(Article article){
 
         if(article == null){
             return null;
@@ -122,7 +64,7 @@ public class ArticleDto {
         return articleDto;
     }
 
-    public  Article toEntity(ArticleDto articleDto){
+    public static Article toEntity(ArticleDto articleDto){
         if(articleDto == null){
             return  null ;
             //todo throw an exception;

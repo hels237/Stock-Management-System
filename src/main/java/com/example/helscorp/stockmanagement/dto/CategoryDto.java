@@ -3,10 +3,14 @@ package com.example.helscorp.stockmanagement.dto;
 import com.example.helscorp.stockmanagement.model.Category;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-
+@Builder
+@Getter
+@Setter
 public class CategoryDto {
 
     private Integer id;
@@ -26,39 +30,6 @@ public class CategoryDto {
         this.code = code;
         this.designation = designation;
     }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
-
-    public List<ArticleDto> getArticles() {
-        return articles;
-    }
-
-    public void setArticles(List<ArticleDto> articles) {
-        this.articles = articles;
-    }
-
 
 
     //----------------------------- mapping CategoryDto with Category----------------------------
