@@ -5,10 +5,10 @@ import lombok.*;
 
 import java.util.List;
 
-@Builder
-@Setter
-@Getter
+@Data
 @EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "client")
 public class Client extends AbstractEntity{
@@ -34,9 +34,6 @@ public class Client extends AbstractEntity{
     @OneToMany(mappedBy = "client")
     private List<CmdeClient> cmdeClients;
 
-
-    public Client() {
-    }
 
 
 

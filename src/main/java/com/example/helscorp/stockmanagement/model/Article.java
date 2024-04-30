@@ -6,8 +6,10 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Builder
+@Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "article")
 public class Article extends AbstractEntity{
@@ -47,95 +49,8 @@ public class Article extends AbstractEntity{
     private List<LigneVente> ligneVentes;
 
 
-    public Article() {
-    }
 
 
-    public String getCodeArticle() {
-        return codeArticle;
-    }
 
-    public void setCodeArticle(String codeArticle) {
-        this.codeArticle = codeArticle;
-    }
 
-    public String getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
-
-    public BigDecimal getPrixUnitaireHt() {
-        return prixUnitaireHt;
-    }
-
-    public void setPrixUnitaireHt(BigDecimal prixUnitaireHt) {
-        this.prixUnitaireHt = prixUnitaireHt;
-    }
-
-    public BigDecimal getTauxTva() {
-        return tauxTva;
-    }
-
-    public void setTauxTva(BigDecimal tauxTva) {
-        this.tauxTva = tauxTva;
-    }
-
-    public BigDecimal getPrixUnitaireTtc() {
-        return prixUnitaireTtc;
-    }
-
-    public void setPrixUnitaireTtc(BigDecimal prixUnitaireTtc) {
-        this.prixUnitaireTtc = prixUnitaireTtc;
-    }
-
-    public String getUrlPhoto() {
-        return urlPhoto;
-    }
-
-    public void setUrlPhoto(String urlPhoto) {
-        this.urlPhoto = urlPhoto;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public List<LigneCmdeClient> getLigneCmdeClients() {
-        return ligneCmdeClients;
-    }
-
-    public void setLigneCmdeClients(List<LigneCmdeClient> ligneCmdeClients) {
-        this.ligneCmdeClients = ligneCmdeClients;
-    }
-
-    public List<LigneCmdeFournisseur> getLigneCmdeFournisseurs() {
-        return ligneCmdeFournisseurs;
-    }
-
-    public void setLigneCmdeFournisseurs(List<LigneCmdeFournisseur> ligneCmdeFournisseurs) {
-        this.ligneCmdeFournisseurs = ligneCmdeFournisseurs;
-    }
-
-    public List<MvtStock> getMvtStocks() {
-        return mvtStocks;
-    }
-
-    public void setMvtStocks(List<MvtStock> mvtStocks) {
-        this.mvtStocks = mvtStocks;
-    }
-
-    public List<LigneVente> getLigneVentes() {
-        return ligneVentes;
-    }
-
-    public void setLigneVentes(List<LigneVente> ligneVentes) {
-        this.ligneVentes = ligneVentes;
-    }
 }

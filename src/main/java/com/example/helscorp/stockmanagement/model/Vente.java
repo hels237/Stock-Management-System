@@ -9,8 +9,10 @@ import lombok.*;
 import java.time.Instant;
 import java.util.List;
 
-@Builder
+@Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "vente")
 public class Vente extends AbstractEntity{
@@ -26,48 +28,5 @@ public class Vente extends AbstractEntity{
 
     @OneToMany(mappedBy = "vente")
     private List<LigneVente> ligneVentes;
-
-    public Vente() {}
-
-
-    public Vente(String codeVente, Instant dateVente, String commentaire, List<LigneVente> ligneVentes) {
-        this.codeVente = codeVente;
-        this.dateVente = dateVente;
-        this.commentaire = commentaire;
-        this.ligneVentes = ligneVentes;
-    }
-
-    public String getCodeVente() {
-        return codeVente;
-    }
-
-    public void setCodeVente(String codeVente) {
-        this.codeVente = codeVente;
-    }
-
-    public Instant getDateVente() {
-        return dateVente;
-    }
-
-    public void setDateVente(Instant dateVente) {
-        this.dateVente = dateVente;
-    }
-
-    public String getCommentaire() {
-        return commentaire;
-    }
-
-    public void setCommentaire(String commentaire) {
-        this.commentaire = commentaire;
-    }
-
-    public List<LigneVente> getLigneVentes() {
-        return ligneVentes;
-    }
-
-    public void setLigneVentes(List<LigneVente> ligneVentes) {
-        this.ligneVentes = ligneVentes;
-    }
-
 
 }
