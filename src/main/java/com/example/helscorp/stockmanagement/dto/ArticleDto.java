@@ -1,14 +1,14 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Article;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ArticleDto {
 
     private Integer id;
@@ -26,21 +26,6 @@ public class ArticleDto {
     private String urlPhoto;
 
     private CategoryDto category;
-
-    public ArticleDto() {
-    }
-
-    public ArticleDto(Integer id, String codeArticle, String designation, BigDecimal prixUnitaireHt, BigDecimal tauxTva, BigDecimal prixUnitaireTtc, String urlPhoto, CategoryDto category) {
-        this.id = id;
-        this.codeArticle = codeArticle;
-        this.designation = designation;
-        this.prixUnitaireHt = prixUnitaireHt;
-        this.tauxTva = tauxTva;
-        this.prixUnitaireTtc = prixUnitaireTtc;
-        this.urlPhoto = urlPhoto;
-        this.category = category;
-    }
-
 
 
 

@@ -2,16 +2,14 @@ package com.example.helscorp.stockmanagement.dto;
 
 
 import com.example.helscorp.stockmanagement.model.Client;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
-@Builder
-@Getter
-@Setter
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ClientDto {
 
     private Integer id;
@@ -31,19 +29,6 @@ public class ClientDto {
 
     private List<CmdeClientDto> cmdeClients;
 
-    public ClientDto() {
-    }
-
-    public ClientDto(Integer id, String nom, String prenom, AdresseDto adresse, String mail, String photo, String numTel, List<CmdeClientDto> cmdeClients) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.adresse = adresse;
-        this.mail = mail;
-        this.photo = photo;
-        this.numTel = numTel;
-        this.cmdeClients = cmdeClients;
-    }
 
 
 

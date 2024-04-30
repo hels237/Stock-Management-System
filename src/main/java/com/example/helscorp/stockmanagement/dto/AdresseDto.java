@@ -3,7 +3,7 @@ package com.example.helscorp.stockmanagement.dto;
 import com.example.helscorp.stockmanagement.model.Adresse;
 import lombok.*;
 
-@Builder
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

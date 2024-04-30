@@ -8,8 +8,8 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class MvtStockDto {
 

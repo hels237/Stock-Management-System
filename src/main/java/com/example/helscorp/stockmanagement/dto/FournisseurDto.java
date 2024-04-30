@@ -1,16 +1,14 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Fournisseur;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
+
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
 public class FournisseurDto {
 
     private Integer id;

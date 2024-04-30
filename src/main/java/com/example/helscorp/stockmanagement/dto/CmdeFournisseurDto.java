@@ -2,17 +2,15 @@ package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.CmdeFournisseur;
 import com.example.helscorp.stockmanagement.model.EtatCmde;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.Instant;
 import java.util.List;
 
 
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class CmdeFournisseurDto {
 

@@ -5,10 +5,9 @@ import lombok.*;
 
 import java.util.List;
 
-
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
 public class EntrepriseDto {
 
     private Integer id;

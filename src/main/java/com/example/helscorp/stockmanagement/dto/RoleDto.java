@@ -3,8 +3,8 @@ package com.example.helscorp.stockmanagement.dto;
 import com.example.helscorp.stockmanagement.model.Role;
 import lombok.*;
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class RoleDto {
 

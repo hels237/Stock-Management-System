@@ -1,14 +1,12 @@
 package com.example.helscorp.stockmanagement.dto;
 import com.example.helscorp.stockmanagement.model.LigneVente;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class LigneVenteDto {
 

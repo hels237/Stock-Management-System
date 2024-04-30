@@ -1,16 +1,14 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Category;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
-@Builder
-@Getter
-@Setter
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CategoryDto {
 
     private Integer id;
@@ -22,14 +20,7 @@ public class CategoryDto {
     private List<ArticleDto> articles;
 
 
-    public CategoryDto() {
-    }
 
-    public CategoryDto(Integer id, String code, String designation) {
-        this.id = id;
-        this.code = code;
-        this.designation = designation;
-    }
 
 
     //----------------------------- mapping CategoryDto with Category----------------------------
@@ -39,10 +30,13 @@ public class CategoryDto {
             return null ;
             //todo throw an exception
         }
-        return new CategoryDto(
-                category.getId(),
-                category.getCode(),
-                category.getDesignation());
+
+        CategoryDto categoryDto = new CategoryDto();
+        categoryDto.setId(category.getId());
+        categoryDto.setDesignation(category.getDesignation());
+        categoryDto.setCode(category.getCode());
+
+        return categoryDto;
     }
 
     //--------------------------------------- mapping category with categoryDto  ----------------------------------
