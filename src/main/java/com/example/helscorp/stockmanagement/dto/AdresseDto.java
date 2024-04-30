@@ -1,14 +1,12 @@
 package com.example.helscorp.stockmanagement.dto;
 
 import com.example.helscorp.stockmanagement.model.Adresse;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Builder
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AdresseDto {
 
     private Integer id;
@@ -22,19 +20,6 @@ public class AdresseDto {
     private String pays;
 
     private String codePostal;
-
-    public AdresseDto() {
-    }
-
-    public AdresseDto(Integer id, String adresse1, String adresse2, String ville, String pays, String codePostal) {
-        this.id = id;
-        this.adresse1 = adresse1;
-        this.adresse2 = adresse2;
-        this.ville = ville;
-        this.pays = pays;
-        this.codePostal = codePostal;
-    }
-
 
 
 

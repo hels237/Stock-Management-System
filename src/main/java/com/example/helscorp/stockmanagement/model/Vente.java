@@ -14,17 +14,20 @@ import java.util.List;
 @Entity
 @Table(name = "vente")
 public class Vente extends AbstractEntity{
+
     @Column(name = "code")
     private String codeVente;
+
     @Column(name = "date_vente")
     private Instant dateVente;
+
     @Column(name = "commentaire")
     private String commentaire;
+
     @OneToMany(mappedBy = "vente")
     private List<LigneVente> ligneVentes;
 
-    public Vente() {
-    }
+    public Vente() {}
 
 
     public Vente(String codeVente, Instant dateVente, String commentaire, List<LigneVente> ligneVentes) {
@@ -65,4 +68,6 @@ public class Vente extends AbstractEntity{
     public void setLigneVentes(List<LigneVente> ligneVentes) {
         this.ligneVentes = ligneVentes;
     }
+
+
 }

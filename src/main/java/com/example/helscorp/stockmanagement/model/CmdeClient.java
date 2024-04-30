@@ -11,16 +11,21 @@ import java.util.List;
 @Entity
 @Table(name = "cmdeClient")
 public class CmdeClient extends AbstractEntity{
+
     @Column(name = "code")
     private String code;
+
     @Column(name = "dateCmde")
     private Instant dateCmde;;
+
     @ManyToOne
     @JoinColumn(name = "clientId")
     private Client client;
+
     @Column(name = "etat_cmde")
     @Enumerated(EnumType.STRING)
     private EtatCmde etat;
+
     @OneToMany(mappedBy = "cmdeClient")
     @Column(name = "ligneCmde")
     private List<LigneCmdeClient> ligneCmde;

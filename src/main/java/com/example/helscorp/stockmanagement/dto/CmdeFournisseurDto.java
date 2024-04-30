@@ -45,7 +45,7 @@ public class CmdeFournisseurDto {
     }
 
 
-    public static CmdeFournisseur fromEntity(CmdeFournisseurDto cmdeFournisseurDto){
+    public static CmdeFournisseur toEntity(CmdeFournisseurDto cmdeFournisseurDto){
         if(cmdeFournisseurDto == null){
             return null;
             //todo throw an exception
