@@ -17,6 +17,7 @@ public class UtilisateurValidator {
           errors.add(" please fill the user firstname ");
           errors.add(" please fill the user lastname ");
           errors.add(" please define the user address ! ");
+          errors.add(" please fill the user email ! ");
       }
 
       if(!StringUtils.hasLength(userDto.getNom())){
@@ -25,6 +26,9 @@ public class UtilisateurValidator {
 
       if(!StringUtils.hasLength(userDto.getPrenom())){
           errors.add(" please fill the user lastname ");
+      }
+      if(!StringUtils.hasLength(userDto.getEmaill())){
+          errors.add(" please fill the user email ! ");
       }
 
       if(userDto.getAdresse() == null){
