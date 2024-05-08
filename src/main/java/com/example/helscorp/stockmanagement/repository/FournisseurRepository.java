@@ -1,0 +1,7 @@
+package com.example.helscorp.stockmanagement.repository;
+
+import com.example.helscorp.stockmanagement.model.Fournisseur;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FournisseurRepository extends JpaRepository<Fournisseur,Integer> {
+}

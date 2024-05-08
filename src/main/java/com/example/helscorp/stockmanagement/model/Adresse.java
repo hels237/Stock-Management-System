@@ -5,7 +5,7 @@ import jakarta.persistence.Embeddable;
 import lombok.*;
 
 
-@EqualsAndHashCode()
+@EqualsAndHashCode
 @Embeddable
 @Data
 @AllArgsConstructor
