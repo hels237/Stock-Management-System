@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.*;
 
-@Builder
+
 @EqualsAndHashCode()
 @Embeddable
 @Data

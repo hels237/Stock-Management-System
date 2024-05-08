@@ -2,8 +2,7 @@ package com.example.helscorp.stockmanagement.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -17,8 +16,9 @@ import java.util.Date;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AbstractEntity  implements Serializable {
 
     @Id
@@ -26,7 +26,9 @@ public class AbstractEntity  implements Serializable {
     private Integer id;
 
     @CreatedDate
-    @Column(name = "creationData",nullable = false)
+    @Column(name = "creationData",
+            nullable = false,
+            updatable = false)
     @JsonIgnore
     private Instant creationDate;
 
@@ -36,14 +38,7 @@ public class AbstractEntity  implements Serializable {
     private Instant lastUpdate;
 
 
-    public AbstractEntity() {
-    }
 
-    public AbstractEntity(Integer id, Instant creationDate, Instant lastUpdate) {
-        this.id = id;
-        this.creationDate = creationDate;
-        this.lastUpdate = lastUpdate;
-    }
 
 
 }
