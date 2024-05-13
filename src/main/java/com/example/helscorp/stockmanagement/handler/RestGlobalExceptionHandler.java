@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 
 @RestControllerAdvice
-public class RestExceptionHandler  extends ResponseEntityExceptionHandler {
+public class RestGlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<ErrorDto> handlerException(EntityNotFoundException exception, WebRequest webRequest){
