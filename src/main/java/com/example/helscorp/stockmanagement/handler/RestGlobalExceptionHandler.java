@@ -24,8 +24,8 @@ public class RestGlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 .build();
 
 
-
         return new ResponseEntity<>(errorDto,notFound);
+
     }
 
 }
