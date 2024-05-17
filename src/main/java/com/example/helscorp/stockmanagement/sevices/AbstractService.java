@@ -8,6 +8,8 @@ public interface AbstractService<T> {
 
    T findById(Integer id);
 
+   T findByCodeArticle(String codeArticle);
+
    List<T> findAll();
 
    void delete(Integer id);

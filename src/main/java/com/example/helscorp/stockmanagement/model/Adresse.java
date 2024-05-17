@@ -5,9 +5,10 @@ import jakarta.persistence.Embeddable;
 import lombok.*;
 
 
+
+@Data
 @EqualsAndHashCode
 @Embeddable
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Adresse {
