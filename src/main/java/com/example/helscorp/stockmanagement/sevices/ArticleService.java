@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface ArticleService extends AbstractService<ArticleDto>{
 
+    ArticleDto findByCodeArticle(String codeArticle);
 }

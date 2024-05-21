@@ -1,4 +1,4 @@
-package com.example.helscorp.stockmanagement.serviceImpl;
+package com.example.helscorp.stockmanagement.sevices.Impl;
 
 import com.example.helscorp.stockmanagement.dto.ArticleDto;
 import com.example.helscorp.stockmanagement.exceptions.EntityNotFoundException;
