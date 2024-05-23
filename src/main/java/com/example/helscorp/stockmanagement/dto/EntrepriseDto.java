@@ -31,6 +31,9 @@ public class EntrepriseDto {
     private List<UtilisateurDto> utilisateurs;
 
 
+
+
+
     public static EntrepriseDto fromEntity(Entreprise entreprise){
         if(entreprise == null){
             return  null;

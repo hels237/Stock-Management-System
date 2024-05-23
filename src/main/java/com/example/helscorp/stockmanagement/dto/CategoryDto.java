@@ -24,7 +24,8 @@ public class CategoryDto {
 
 
     //----------------------------- mapping CategoryDto with Category----------------------------
-    public CategoryDto fromEntity(Category category) {
+
+    public static CategoryDto fromEntity(Category category) {
 
         if (category == null) {
             return null ;
@@ -39,8 +40,9 @@ public class CategoryDto {
         return categoryDto;
     }
 
+
     //--------------------------------------- mapping category with categoryDto  ----------------------------------
-    public Category  toEntity(CategoryDto categoryDto){
+    public static Category  toEntity(CategoryDto categoryDto){
 
         if(categoryDto == null){
             return null;

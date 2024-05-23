@@ -26,4 +26,5 @@ public interface ArticleApi {
     @DeleteMapping(value = APP_ROOT+"/article/delete/{idArticle}")
     void delete(@PathVariable("idArticle") Integer id);
 
+
 }
